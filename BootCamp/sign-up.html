@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./Sign up.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>* {
+    padding: 0%;
+    margin: 0%;
+}
+
+.body {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    /* flex-direction: column; */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins";
+}
+
+.signup-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 40px;
+    font-family: "Poppins";
+}
+
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007574;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #007574;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #007574;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .body {
+        padding: 15px;
+    }
+    
+    .signup-form {
+        padding: 25px;
+        box-shadow: none;
+        max-width: 100%;
+    }
+    
+    .signup-form h2 {
+        font-size: 22px;
+    }
+    
+    .form-group input {
+        padding: 12px;
+    }
+}
+@media (max-width: 480px) {
+    .signup-form {
+        padding: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    button[type="submit"] {
+        padding: 14px;
+    }
+}</style>
+    <div class="body">
+        <div class="signup-form">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p class="login-link">Already have an account? <a href="Sign in.html">Sign In</a></p>
+        </div>
+        
+    </div>
+            <script>
+
+document.getElementById('signupForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        
+        
+        console.log('Sign Up Attempt:');
+        console.log('Username:', username);
+        console.log('Password:', password);
+       
+        
+        
+        alert('Sign up Successful!');
+       
+        this.reset();
+        window.location.href="./Sign in.html"
+
+      
+  document.querySelector("Sign in.html").addEventListener('click', function() {
+    console.log('Button clicked!');
+    setTimeout(() => {
+        window.open('./Sign in.html');
+    }, 500);
+});
+
+    });
+
+   
+            </script>
+    
+</body>
+</html>

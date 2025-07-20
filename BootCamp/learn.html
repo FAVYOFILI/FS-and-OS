@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzy</title>
+    <!-- <link rel="stylesheet" href="Learn.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: "Poppins";
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px 10px 10px 10px;
+  height: 220px;
+  width: 200px;
+  font-family: "Poppins";
+}
+
+.contain {
+  height: 110px;
+  width: 190px;
+}
+
+.buttons {
+  width: 100px;
+  height: 30px;
+  background-color: #007574;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  margin-top: 80px;
+}
+
+.buttons:hover{
+  cursor: pointer;
+  transition: all 180ms;
+}
+
+h1 {
+  color: #007574;
+  margin-bottom: 20px;
+}
+
+.instruction {
+  color: #555;
+  font-size: 14px;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+}
+
+.quiz-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007574;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.quiz-link:hover {
+  background-color: #007574;
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 18px;
+    min-height: 230px;
+    box-shadow: none;
+    border: none;
+    border-radius: none;
+  }
+  
+  .buttons {
+    width: 100px;
+    height: 36px;
+    font-size: 13px;
+  }
+  
+  h1 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .instruction {
+    font-size: 12px;
+  }
+}</style>
+<div class="container">
+    <div class="contain">
+        <h1>Java</h1>
+        <p class="instruction">Learn more about Java, the versatile and widely-used programming language, for building cross-platform.</p>
+    </div>
+    <button class="buttons" id="buttons">Learn More</button>
+</div>
+<script>
+    document.getElementById("buttons").addEventListener('click', function(event) {
+        event.preventDefault();
+        alert('You are being redirected to W3Schools to learn java!');
+        window.location.href = "https://www.w3schools.com/java/default.asp";
+    });
+    </script>
+
+<div class="container">
+    <div class="contain">
+        <h1>Typescript</h1>
+    <p class="instruction">Learn more about TypeScript, a strongly-typed superset of JavaScript that enhances code quality.</p>
+    </div>
+    <button class="buttons" id="buttons">Learn More</button>
+</div>
+
+
+<script>
+    document.getElementById("buttons").addEventListener('click', function(event) {
+        event.preventDefault();
+        alert('You are being redirected to W3Schools to learn!');
+        window.location.href = "https://www.w3schools.com/typescript/index.php";
+    });
+    </script>
+
+
+<div class="container">
+    <div class="contain">
+        <h1>Html</h1>
+    <p class="instruction">Learn more about HTML, the foundation of web development, to start building and designing your own websites today!</p>
+    </div>
+    <button class="buttons" id="buttons">Learn More</button>
+</div>
+
+
+<script>
+    document.getElementById("buttons").addEventListener('click', function(event) {
+        event.preventDefault();
+        alert('You are being redirected to W3Schools to learn html!');
+        window.location.href = "https://www.w3schools.com/html/default.asp";
+    });
+    </script>
+    
+
+<div class="container">
+    <div class="contain">
+        <h1>Css</h1>
+    <p class="instruction">Learn more about CSS to style and design beautiful, responsive websites with ease!
+    </p>
+    </div>
+    <button class="buttons">Learn More</button>
+</div>
+
+
+<script>
+    document.getElementById("buttons").addEventListener('click', function(event) {
+        event.preventDefault();
+        alert('You are being redirected to W3Schools to learn css!');
+        window.location.href ="https://www.w3schools.com/css/default.asp" ;
+    });
+    </script>
+
+<div class="container">
+    <div class="contain">
+        <h1>Javascript</h1>
+    <p class="instruction">Learn more about JavaScript, the versatile programming language that powers interactive and dynamic code.</p>
+    </div>
+    <button class="buttons" id="buttons">Learn More</button>
+</div>
+
+
+<script>
+    document.getElementById("buttons").addEventListener('click', function(event) {
+        event.preventDefault();
+        alert('You are being redirected to W3Schools to learn javascript!');
+        window.location.href = "https://www.w3schools.com/js/default.asp";
+    });
+    </script>
+
+    
+     <div class="container">
+        <div class="contain"><h1>Sql</h1>
+            <p class="instruction">Learn more about SQL to efficiently manage and query databases for powerful data analysis.</p>
+        </div>
+        <button class="buttons" id="buttons">Learn More</button>
+    </div>
+    
+
+    <script>
+        document.getElementById("buttons").addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('You are being redirected to W3Schools to learn sql!');
+            window.location.href = "https://www.w3schools.com/sql/default.asp";
+        });
+        </script>
+
+<div class="container">
+    <div class="contain">
+        <h1>Python</h1>
+    <p class="instruction">"Learn more about Python, a versatile and powerful programming language, perfect for beginners and experts alike!</p>
+    </div>
+    <button class="buttons" id="buttons">Learn More</button>
+</div>
+
+
+<script>
+    document.getElementById("buttons").addEventListener('click', function(event) {
+        event.preventDefault();
+        alert('You are being redirected to W3Schools to learn python!');
+        window.location.href = "https://www.w3schools.com/python/default.asp";
+    });
+    </script>
+
+<div class="container"> 
+    <div class="contain">
+        <h1>React</h1>
+    <p class="instruction">Learn more about React, a powerful JavaScript library for building dynamic and interactive user interfaces.</p> 
+    </div>
+    <button class="buttons" id="buttons">Learn More</button>
+</div>
+
+
+<script>
+     document.getElementById("buttons").addEventListener('click', function(event) { 
+        event.preventDefault(); 
+        alert('You are being redirected to W3Schools to learn react!'); 
+         window.location.href = "https://www.w3schools.com/react/default.asp"; 
+     });
+    </script>
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <style>
+      * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 0 20px;
+}
+
+.logoholder {
+  width: auto;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoholder img {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  margin-left: 0;
+}
+
+.navholder {
+  display: none;
+}
+
+.navs {
+  font-size: 15px;
+  width: 40px;
+  height: 60px;
+  font-family: Poppins;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.navs:hover {
+  cursor: pointer;
+  transition: all 150ms;
+  text-decoration: none;
+}
+
+.signin {
+  width: 90px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  border: solid 1px rgba(128, 128, 128, 0.123);
+  margin-right: 10px;
+}
+
+.signup:hover {
+  cursor: pointer;
+  transition: all 150ms;
+  text-decoration: none;
+  /* color: white; */
+  background-color: #007573;
+}
+
+.signup {
+  width: 90px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  border: solid 1px rgba(128, 128, 128, 0.123);
+  margin-right: 0;
+}
+
+.hero {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("./Heropage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  font-family: "Poppins";
+  padding: 0 20px;
+}
+
+.herop {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.bold {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 2.1rem;
+  margin-bottom: 30px;
+}
+
+.bol {
+  display: flex;
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 65px;
+  text-align: center;
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.signup a {
+  text-decoration: none;
+  color: black;
+}
+
+.learnfirst:hover,
+.gamewithus:hover {
+  cursor: pointer;
+  transition: all 150ms;
+  text-decoration: none;
+}
+
+.learnfirst,
+.gamewithus {
+  width: 140px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 10px;
+  background-color: #007574;
+  color: white;
+  border: solid 1px rgba(128, 128, 128, 0.123);
+  margin: 0;
+}
+
+.secondhero {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+.cards {
+  width: 100%;
+  max-width: 300px;
+  height: 330px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  border: solid 2px #007573;
+  font-family: "Poppins";
+}
+
+.Subcard1 {
+  width: 100%;
+  height: 160px;
+  border-radius: 20px;
+}
+
+.Subcard1 img {
+  width: 100%;
+  height: 160px;
+  border-radius: 20px;
+}
+
+.Subcard2 {
+  padding: 10px;
+}
+
+.Subcardtext {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-family: "Poppins";
+  text-align: center;
+  color: #007574;
+}
+
+.Subp {
+  font-family: "Poppins";
+  margin-top: 3px;
+  text-align: center;
+  padding: 0 10px;
+  color: #007574;
+}
+
+.thirdhero {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.First,
+.Second,
+.Third {
+  width: 100%;
+  max-width: 400px;
+  height: 190px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  border: solid 2px #007573;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Poppins";
+}
+
+.fir {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  font-family: "Poppins";
+  color: #007574;
+}
+
+.sec {
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  font-family: "Poppins";
+  color: #007574;
+}
+
+.fourthhero {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-radius: 20px; */
+  font-family: "Poppins";
+  background-color: #007574;
+  padding: 40px 20px;
+}
+
+.Four {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  /* border-radius: 20px; */
+  margin-left: 0;
+  text-align: center;
+}
+
+.tex {
+  font-size: 1.1rem;
+  color: white;
+  font-family: "Poppins";
+  margin: 10px 0;
+}
+
+.textt {
+  font-size: 1.8rem;
+  color: white;
+  margin: 20px 0;
+  font-family: "Poppins";
+  text-align: center;
+}
+
+.Five {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-top: 20px;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.25)), url("./c62f049232a43427ddc24234150f5ccd.jpg"); */
+}
+
+.Five img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.25)), url("./c62f049232a43427ddc24234150f5ccd.jpg"); */
+}
+
+.Footer {
+  width: 100%;
+  height: 80px;
+  background-color: #007574;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-radius: 20px; */
+  padding: 30px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.footer1 {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.footer1 img {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  margin-left: 0;
+  /* justify-content: center; */
+}
+
+.footer2,
+.footer3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.footer2 a,
+.footer3 a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.afooter {
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.fr {
+  color: white;
+}
+
+.quiztex {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.foot {
+  color: white;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  margin-bottom: 40px;
+  margin-right: 500px;
+}
+/* Desktop View  */
+@media (min-width: 768px) {
+  .header {
+    padding: 0 40px;
+  }
+
+  .navholder {
+    width: 30%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .bold {
+    font-size: 56px;
+  }
+
+  .bol {
+    font-size: 56px;
+    width: 70%;
+  }
+
+  .secondhero {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 60px 40px;
+  }
+
+  .thirdhero {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 60px 40px;
+  }
+
+  .fourthhero {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .Four {
+    width: 45%;
+    margin-left: 50px;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .textt {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .tex {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .Five {
+    width: 40%;
+    margin-top: 0;
+  }
+
+  .Footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .footer1 {
+    margin-left: 40px;
+    align-items: flex-start;
+  }
+
+  .footer2,
+  .footer3 {
+    align-items: flex-start;
+  }
+
+  .foot {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Large Desktop View */
+@media (min-width: 1200px) {
+  .header {
+    padding: 0 60px;
+  }
+
+  .bold {
+    font-size: 64px;
+  }
+
+  .bol {
+    font-size: 29px;
+  }
+
+  .secondhero {
+    padding: 80px 60px;
+  }
+
+  .thirdhero {
+    padding: 80px 60px;
+  }
+
+  .foot {
+    justify-content: center;
+    align-items: center;
+  }
+}
+    </style>
+    <div class="body">
+      <div class="header">
+        <div class="logoholder">
+          <img
+            src="./c62f049232a43427ddc24234150f5ccd.jpg"
+            alt="Logo Picture"
+          />
+          Quizzy
+        </div>
+        <div class="navholder">
+          <div class="navs">Home</div>
+          <div class="navs" id="about">About</div>
+          <button class="signup"><a href="./Sign up.html">Sign Up</a></button>
+          <!-- <button class="signin"><a href="./Sign in.html">Sign In</a></button> -->
+        </div>
+      </div>
+      <div class="hero">
+        <div class="herop">
+          <h1 class="bold">
+            Get Entertained, Have fun and Boost your Intellectuals.
+          </h1>
+          <p class="bol">
+            Are you ready to test your knowledge,challenge your friends, and
+            learn something new? Play fun quiz designed to make learning
+            engaging and entertaining!
+          </p>
+        </div>
+
+        <div class="buttons">
+          <button class="learnfirst">Learn First</button>
+          <button class="gamewithus">Game With Us</button>
+        </div>
+      </div>
+
+
+      <div class="fourthhero" >
+        <div class="Four">
+          <div class="text">
+            <h1 class="textt">About Us</h1>
+            <p class="tex">
+              Welcome to Quizzy, where learning meets fun! We're passionate
+              about creating engaging, interactive quizzes that challenge your
+              mind, spark curiosity, and bring people together. At Quizzy, we
+              believe that knowledge should be exciting, not boring. Whether
+              you're a trivia fan, a competitive player, or just looking to
+              learn something new, our app offers a dynamic way to test your
+              skills, compete with friends, and discover fascinating facts.
+            </p>
+          </div>
+        </div>
+        <div class="Five">
+          <img src="./c62f049232a43427ddc24234150f5ccd-removebg-preview.png" alt="About image" />
+        </div>
+      </div>
+
+
+      <div class="secondhero" id="quizzy">
+        <div class="cards">
+          <div class="Subcard1">
+            <img src="./images (1).jpeg" alt="Card Image" />
+          </div>
+          <div class="Subcard2">
+            <h1 class="Subcardtext">Boost Intellectuals</h1>
+            <p class="Subp">
+              Sharpen your mind, improve memory, and think faster? Try these
+              easy habits to boost your intellect
+            </p>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="Subcard1">
+            <img
+              src="./ZnzhR5bWFbowe7gR_QuizzesCoverpagecopy.jpg"
+              alt="Card Image"
+            />
+          </div>
+          <div class="Subcard2">
+            <h1 class="Subcardtext">Fun Exercise</h1>
+            <p class="Subp">
+              Challenge! Race against the clock, battle friends, and unlock cool
+              rewards as you climb the leaderboard.
+            </p>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="Subcard1">
+            <img src="./360_F_345880772_zIT2mkdCzTthplO7xqaGGrMspN0jw0ll.jpg" alt="Card Image" />
+          </div>
+          <div class="Subcard2">
+            <h1 class="Subcardtext">Question Answering</h1>
+            <p class="Subp">
+              Users answer questions across various topics and difficult levels
+              which helps to engage their thoughts.
+            </p>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="Subcard1">
+            <img
+              src="./8ab7d3efb4b4965b52d3b9012a05c72a.jpg"
+              alt="Card Image"
+            />
+          </div>
+          <div class="Subcard2">
+            <h1 class="Subcardtext">Progress Tracking</h1>
+            <p class="Subp">
+              Users can track their scores, win/loss ratios, and overall
+              performance to monitor their improvement.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="thirdhero">
+        <div class="First">
+          <h1 class="fir">Learn First</h1>
+          <p class="sec">
+            Quizzy gives access to learn first and then play the quiz game in
+            order to gain idea about a specific area. Know core concepts Once
+            you've solved it, structure your notes into a clear write-up, to
+            help note your corrections
+          </p>
+        </div>
+        <div class="Second">
+          <h1 class="fir">Game With US</h1>
+          <p class="sec">
+            Quizzy gives you access to play quiz, get knowledge,get entertained,
+            boost your educational skill rapidly. "We've built a fun little
+            game. Can you beat it and get the flag?" We have to guess input
+            certain values to "win."
+          </p>
+        </div>
+        <div class="Third">
+          <h1 class="fir">Get Entertained</h1>
+          <p class="sec">
+            Test your knowledge, challenge friends, and have fun with our
+            interactive quiz app! With a variety of categories from trivia and
+            pop culture to science and history there's something for everyone.
+            Earn points and unlock levels.
+        </div>
+      </div>
+
+      <div class="Footer">
+        <div class="footer1">
+            <img
+              src="./c62f049232a43427ddc24234150f5ccd.jpg"
+              alt="Logo Picture"
+            />
+           <h1 class="quiztex">Quizzy</h1> 
+           <!-- <p>Home About Sign Up</p> -->
+        </div>
+        <div class="foot">2025 Quizzy Copyright Reserved</div>
+        <!-- <div class="footer2">
+          <h1 class="afooter">Quick Links</h1>
+           <a href="./Learn.html">Learn First</a> 
+             <a href="./Quiz.html">Game With US</a>
+              <a href="#quizzy">What Quizzy Do?</a>
+              <a href="#about">About Quizzy</a>
+        </div>
+        <div  class="footer3">
+          <h1 class="afooter">Contact Us</h1>
+             <a href="https://www.tiktok.com/@favy.ofili" id="favy">https://www.tiktok.com/@favy.ofili</a>
+            <a href="https://www.instagram.com/favyofili/" id="favy">https://www.instagram.com/favyofili/</a> 
+           <a href=" https://x.com/favyofili" id="favy"> https://x.com/favyofili</a>
+          </p> -->
+        </div>
+      </div>
+    </div>
+
+ <script>
+  document.querySelector('.learnfirst').addEventListener('click', function() {
+    console.log('Button clicked!');
+    setTimeout(() => {
+        window.open('./Learn.html');
+    }, 500);
+});
+ </script>
+
+ 
+<script>
+  document.querySelector('.gamewithus').addEventListener('click', function() {
+    console.log('Button clicked!');
+    setTimeout(() => {
+        window.open('./Quiz.html');
+    }, 500);
+});
+ </script>
+  
+        
+  </body>
+</html>

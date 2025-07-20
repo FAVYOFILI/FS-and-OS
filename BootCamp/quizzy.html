@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quizzy App</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <style>
+            body {
+            font-family: Arial, Helvetica, sans-serif; 
+            padding: 20%; 
+            max-width: 600px; 
+            background: #f4f4f4;
+            align-items: center;
+            text-align: center;
+            margin-left: 80px;
+            margin-bottom: 100px;
+            font-family: "Poppins";
+        }
+     .Question { 
+        font-size: 1.2em; 
+        margin-bottom: 10px;
+    }
+     .Options { 
+        list-style-type: none; 
+        padding: 0%; 
+    }
+     .Options li {
+         margin-bottom: 10px; 
+    }
+     .Options button {
+        width: 80%;
+        padding: 10px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 20px;
+        background-color:#007574 ;
+        color: white;
+        border: #007574;
+     }
+     #result { 
+        margin-top: 20px; 
+        font-weight: bold
+    }
+
+    .button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007574;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        display: none; 
+        height: 20px;
+        width: 200px;
+    }
+      
+
+    @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            #Quiz {
+                padding: 20px;
+            }
+            
+            .Question {
+                font-size: 1.1em;
+            }
+            
+            .Options button {
+                padding: 10px;
+                font-size: 0.9em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #Quiz {
+                padding: 15px;
+            }
+            
+            h2 {
+                font-size: 1.3em;
+                margin-bottom: 20px;
+            }
+            
+            .Question {
+                font-size: 1em;
+                margin-bottom: 15px;
+            }
+            
+            .Options li {
+                margin-bottom: 10px;
+            }
+        }
+
+     </style>
+     <h2>Quizzy</h2>
+     <div id="Quiz">
+        <div class="Question" id="Question">loading.....</div>
+        <ul class="Options" id="Options"></ul>
+        <div id="result"></div>
+        <div class="button" id="nextButton">Next</div>
+    </div>
+    <script src="Quiz.js">
+
+        const QuizData = [
+     { Question: "What is the full meaning of JS?",
+       Options: ["Javascript", "Javes", "Jets", "Joges"],
+       Answer: "Javascript",
+     },
+
+ {     Question: "Which is a programming language?", 
+       Options: ["Jagaban", "Javascript", "Javas", "All of the above"],
+       Answer: "Javascript",
+     },
+ {     Question: "What does the H in HTML represent?",
+       Options: ["Hype", "Hyperlink", "Hyper", "Hyperlink"], 
+       Answer: "Hyper", 
+},
+{      Question: "What does the H in HTML represent?",
+       Options: ["Hype", "Hyperlink", "Hyper", "Hyperlink"],
+     Answer: "Hyper", },
+    ];
+
+let currentquestion = 0;
+
+const question = document.getElementById("Question");
+const options= document.getElementById("Options");
+const result = document.getElementById("result");
+
+
+function Loadquestion() 
+{   const q = QuizData[currentquestion];
+    question.textContent = q.Question; options.innerHTML = "";
+    q.Options.forEach((option) => { const btn = document.createElement("button");
+     btn.textContent = option; 
+     btn.onclick = () => ConfirmAnswer (option); 
+     const li = document.createElement("li");li.appendChild(btn); options.appendChild(li);});
+result.textContent = "";}
+
+function ConfirmAnswer(selected) 
+{ const Correct = QuizData[currentquestion].Answer; 
+    if(selected === Correct)
+     {
+         result.textContent = "Correct!"; result.style.color = "green";
+      } else {
+        result.textContent = Wrong! Correct answer is ${Correct}; result.style.color = "red";
+     }
+
+setTimeout(() => { currentquestion++;if (currentquestion < QuizData.length) 
+    { Loadquestion(); } else { QuizEnd(); 
+
+    }}, 3000);}
+
+function QuizEnd()
+ { question.textContent = "Quiz Completed!";
+     options.innerHTML = ""; result.textContent = "";}
+     Loadquestion();
+    </script>
+    </body>
+    </html>
